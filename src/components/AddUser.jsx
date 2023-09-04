@@ -14,8 +14,6 @@ export default function AddUser() {
    const saveUser = async (e) => {
       e.preventDefault();
       try {
-         // jgn lupa URL ke db ganti ke environment variables (.env) saat menggunakan mongodb atlas
-         // contoh ada di folder backend
          await axios.post("http://localhost:5000/users", userData);
          navigate("/");
       } catch (error) {
